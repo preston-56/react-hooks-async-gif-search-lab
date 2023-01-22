@@ -1,20 +1,21 @@
-import React from "react";
-
-function NavBar({ color, title }) {
+import React from 'react'
+function NavBar(props){
   const colors = {
-    black: "navbar-inverse",
-    white: "navbar-default",
-  };
-
+    black: 'navbar-inverse',
+    white: 'navbar-default'
+  }
+  
   return (
-    <nav className={`navbar ${colors[color]}`}>
-      <div className="container-fluid">
-        <div className="navbar-header">
-          <span className="navbar-brand">{title}</span>
+    <nav className={`navbar ${colors[props.color]}`}>
+      <div className='container-fluid'>
+        <div className='navbar-header'>
+          <span className='navbar-brand'>
+            { props.title }
+          </span>
         </div>
       </div>
     </nav>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar
